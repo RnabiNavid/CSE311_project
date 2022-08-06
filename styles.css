@@ -9,7 +9,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: rgb(40, 82, 122);
+  background-color: rgb(2, 12, 20);
   font-family: "Poppins", sans-serif;
 }
 
@@ -36,6 +36,7 @@ nav {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 form {
@@ -43,7 +44,7 @@ form {
   width: 500px;
   height: 40px;
   display: flex;
-  border-radius: 27.5px;
+  border-radius: 10px;
 }
 form input {
   flex: 1;
@@ -52,7 +53,7 @@ form input {
   border-radius: 27.5px;
 }
 form button {
-  background: tomato;
+  background: rgb(61, 88, 241);
   padding: 10px 50px;
 
   border: none;
@@ -60,10 +61,56 @@ form button {
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
-  border-radius: 27.5px;
+  border-radius: 10px;
 }
 form .fa-solid {
   align-self: center;
   padding: 10px 20px;
   color: #777;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: rgb(2, 12, 20);
+  padding: 100px 0 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  width: 300px;
+  flex-shrink: 10%;
+  padding: 10px;
+}
+
+.col .h2 {
+  width: fit-content;
+  margin-bottom: 40px;
+}
+
+.col form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+.col .form .far {
+  font-size: 18px;
+  margin-right: 10px;
 }
