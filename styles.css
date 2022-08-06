@@ -96,21 +96,54 @@ footer {
   padding: 10px;
 }
 
-.col .h2 {
+.col h2 {
+  text-transform: uppercase;
   width: fit-content;
   margin-bottom: 40px;
 }
 
-.col form {
-  padding-bottom: 15px;
+.col li {
+  background: #fff;
+  width: 150px;
+  height: 40px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 50px;
+  border-radius: 27.5px;
 }
 
-.col .form .far {
-  font-size: 18px;
-  margin-right: 10px;
+.col li input {
+  flex: 1;
+  border: 10;
+  outline: 0;
+  border-radius: 27.5px;
+}
+
+.col input {
+  background: #fff;
+  padding: 10;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+.col textarea {
+  background: #fff;
+  padding: 10;
+  width: 250px;
+  height: 80px;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.col button {
+  background: rgb(61, 88, 241);
+  padding: 10px 50px;
+
+  border: none;
+  outline: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 10px;
 }
