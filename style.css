@@ -211,7 +211,7 @@ footer {
 }
 
 .m-btn {
-  border: 2px solid grey;
+  border: 1px solid grey;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -222,6 +222,26 @@ footer {
   margin-right: 30px;
 }
 .m-btn:hover {
-  background-color: grey;
+  background-color: rgb(219, 215, 215);
 }
-#radio1: checked;
+
+#radio1:checked ~ .first {
+  margin: left 0;
+}
+#radio2:checked ~ .first {
+  margin: left -20%;
+}
+#radio3:checked ~ .first {
+  margin: left -40%;
+}
+#radio4:checked ~ .first {
+  margin: left -60%;
+}
+
+.nav-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 460px;
+  display: flex;
+  justify-content: center;
+}
