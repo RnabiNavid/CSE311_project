@@ -209,3 +209,19 @@ footer {
   justify-content: center;
   display: flex;
 }
+
+.m-btn {
+  border: 2px solid grey;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.m-btn:not(last-child) {
+  margin-right: 30px;
+}
+.m-btn:hover {
+  background-color: grey;
+}
+#radio1: checked;
