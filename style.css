@@ -1,4 +1,5 @@
-* {
+body {
+  background-color: rgb(254, 254, 255);
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -8,65 +9,60 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 5rem;
   background-color: rgb(2, 12, 20);
   font-family: "Poppins", sans-serif;
 }
 
-.logo {
-  color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo :hover {
+  cursor: pointer;
 }
 
-.nav_links {
+.nav-link {
+  margin: 0;
   display: flex;
-
   justify-content: space-around;
   width: 30%;
 }
-.nav_links li {
+.nav-link li {
+  padding: 26px;
+  margin: 0;
+  text-align: center;
   list-style: none;
 }
-
-.nav_links a {
+.nav-link a {
   color: whitesmoke;
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
 }
-
-form {
-  background: #fff;
-  width: 500px;
-  height: 40px;
-  display: flex;
+.nav-link li:hover {
+  background-color: rgb(52, 33, 104);
+}
+.sb {
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+}
+.searchbar {
+  padding: 10px 60px;
   border-radius: 10px;
-}
-form input {
-  flex: 1;
-  border: 0;
   outline: 0;
-  border-radius: 27.5px;
 }
-form button {
+.button {
   background: rgb(61, 88, 241);
   padding: 10px 50px;
-
+  margin: 2px;
   border: none;
   outline: 0;
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
   border-radius: 10px;
-}
-form .fa-solid {
-  align-self: center;
-  padding: 10px 20px;
-  color: #777;
 }
 
 footer {
@@ -79,6 +75,7 @@ footer {
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   line-height: 20px;
+  padding: 0;
 }
 
 .row {
@@ -100,6 +97,7 @@ footer {
   text-transform: uppercase;
   width: fit-content;
   margin-bottom: 40px;
+  padding-bottom: 2px;
 }
 
 .col li {
@@ -120,6 +118,7 @@ footer {
 .col input {
   background: #fff;
   padding: 10;
+  outline: 0;
   width: 200px;
   height: 40px;
   display: flex;
@@ -128,6 +127,7 @@ footer {
 }
 .col textarea {
   background: #fff;
+  outline: 0;
   padding: 10;
   width: 250px;
   height: 80px;
