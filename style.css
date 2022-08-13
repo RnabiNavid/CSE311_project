@@ -5,10 +5,13 @@
 }
 
 body {
-  background-color: rgb(254, 254, 255);
   margin: 0px;
   padding: 0px;
+  height: 100vh;
+  justify-self: center;
+  align-items: center;
   box-sizing: border-box;
+  background-color: rgb(254, 254, 255);
 }
 header {
   top: 0;
@@ -164,16 +167,45 @@ footer {
   border-radius: 10px;
 }
 
-main {
-  padding: 2px;
-  align-content: center;
-  min-height: 90vh;
-  min-height: calc(100vh- 80px -241.99px);
+.section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
-.slider {
-  width: 80%;
-  height: 700px;
-  margin: 10px auto;
 
-  background-color: aquamarine;
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 105x;
+  overflow: hidden;
+}
+
+.slide {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slide input {
+  display: none;
+}
+
+.st {
+  width: 20%;
+  transition: 2s;
+}
+
+.st img {
+  width: 800px;
+  height: 500px;
+}
+
+.nav-m {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  justify-content: center;
+  display: flex;
 }
