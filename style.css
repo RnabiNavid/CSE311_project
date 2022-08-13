@@ -245,3 +245,10 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+.nav-auto div {
+  border: 1px solid salmon;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
