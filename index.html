@@ -34,43 +34,93 @@
   </header>
 
  <main>
-  <section class="section">
-    <div class="slider">
-      <div class="slide">
-
-        <input type="radio" name="radiobtn" id="radio1">
-        <input type="radio" name="radiobtn" id="radio2">
-        <input type="radio" name="radiobtn" id="radio3">
-        <input type="radio" name="radiobtn" id="radio4">
-
-        <div class="st">
+  <section class="sliderbox">
+     <div class="img-slider">
+      
+        <div class="slide active">
           <img src="./Img/slides/dell-banner-website-982x500.jpg" alt="">
         </div>
-          <div class="st">
+
+        <div class="slide">
           <img src="./Img/slides/gamdias-gaming-chair-deal-offer-page-august-2022-982x500.jpg" alt="">
         </div>
-          <div class="st">
+
+        <div class="slide">
           <img src="./Img/slides/huawei-matebook-d-home-banner-982x500.jpg" alt="">
         </div>
-          <div class="st">
+
+        <div class="slide">
           <img src="./Img/slides/maxgreen-laptop-adapter-982x500.jpg" alt="">
-        </div>
-           
-        <div class="nav-auto">
-          <div class="a-b1"></div>
-          <div class="a-b2"></div>
-          <div class="a-b3"></div>
-          <div class="a-b4"></div>
         </div>
 
       </div>
-      <div class="nav-m">
-        <label for="radio1" class="m-btn"></label>
-        <label for="radio1" class="m-btn"></label>
-        <label for="radio1" class="m-btn"></label>
-        <label for="radio1" class="m-btn"></label>
+
+      <div class="navigation">
+
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      
       </div>
     </div>
+
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+ 
   </section>
  </main>
  
