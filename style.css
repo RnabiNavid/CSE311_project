@@ -181,6 +181,7 @@ footer {
   height: 500px;
   margin: 10px;
   background: rgb(6, 179, 92);
+  border-radius: 10px;
 }
 
 .img-slider .slide {
