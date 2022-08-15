@@ -129,6 +129,25 @@ footer {
   padding: 10px;
 }
 
+.facebook {
+  color: rgb(46, 141, 230);
+}
+.whatsapp {
+  color: rgb(1, 165, 51);
+}
+.mail {
+  color: #fff;
+}
+.facebook:hover {
+  color: rgb(46, 193, 230);
+}
+.whatsapp :hover {
+  color: rgb(46, 193, 230);
+}
+.mail:hover {
+  color: rgb(46, 193, 230);
+}
+
 .col h2 {
   text-transform: uppercase;
   width: fit-content;
@@ -183,6 +202,9 @@ footer {
   letter-spacing: 1px;
   cursor: pointer;
   border-radius: 10px;
+}
+.col button:hover {
+  background: rgb(21, 126, 73);
 }
 
 .sliderbox {
@@ -285,8 +307,4 @@ footer {
   .img-slider .navigation {
     bottom: 10px;
   }
-}
-
-.facebook {
-  color: rgb(44, 186, 241);
 }
