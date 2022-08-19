@@ -322,7 +322,7 @@ footer {
   width: 2000px;
   height: 2000px;
   border-radius: 50%;
-  background: linear-gradient(-46deg, #000000, #000000);
+  background: linear-gradient(-46deg, #00bf33, rgb(4, 155, 84));
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
@@ -486,6 +486,7 @@ form.signup-form {
 }
 .panel .content {
   color: #fff;
+  transition: 0.9s 0.6s ease-in-out;
 }
 .panel h3 {
   font-weight: 600;
@@ -520,4 +521,14 @@ form.signup-form {
 .container.signup-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
+}
+
+.container.signup-mode .left-panel .img,
+.container.signup-mode .left-panel .container {
+  transform: translateX(-800px);
+}
+
+.container.signup-mode-mode .right-panel .img,
+.container.signup-mode-mode .right-panel .container {
+  transform: translateX(0px);
 }

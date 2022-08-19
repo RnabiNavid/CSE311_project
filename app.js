@@ -53,10 +53,10 @@ const signin_btn = document.querySelector("#signin-btn");
 const signup_btn = document.querySelector("#signup-btn");
 const container = document.querySelector(".container");
 
-signin_btn.addEventListener("click", () => {
-  container.classList.add("signin-mode");
-});
-
 signup_btn.addEventListener("click", () => {
   container.classList.add("signup-mode");
+});
+
+signin_btn.addEventListener("click", () => {
+  container.classList.remove("signup-mode");
 });
