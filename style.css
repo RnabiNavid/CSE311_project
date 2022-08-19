@@ -322,7 +322,7 @@ footer {
   width: 2000px;
   height: 2000px;
   border-radius: 50%;
-  background: linear-gradient(-46deg, #00bf33, rgb(4, 155, 84));
+  background: linear-gradient(-46deg, #000000, rgb(0, 0, 0));
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
@@ -347,6 +347,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+  transition: 1s 0.7s ease-in-out;
 }
 
 form {
@@ -528,7 +529,27 @@ form.signup-form {
   transform: translateX(-800px);
 }
 
-.container.signup-mode-mode .right-panel .img,
-.container.signup-mode-mode .right-panel .container {
+.container.signup-mode .right-panel .content,
+.container.signup-mode .right-panel .img {
   transform: translateX(0px);
+}
+
+.container.signup-mode .left-panel {
+  pointer-events: none;
+}
+.container.signup-mode .right-panel {
+  pointer-events: all;
+}
+
+.container.signup-mode .signin-signup {
+  left: 25%;
+}
+
+.container.signup-mode form.signin-form {
+  z-index: 1;
+  opacity: 0;
+}
+.container.signup-mode form.signup-form {
+  z-index: 2;
+  opacity: 1;
 }
