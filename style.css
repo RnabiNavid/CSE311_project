@@ -525,7 +525,7 @@ form.signup-form {
 }
 
 .container.signup-mode .left-panel .img,
-.container.signup-mode .left-panel .container {
+.container.signup-mode .left-panel .content {
   transform: translateX(-800px);
 }
 
@@ -545,11 +545,21 @@ form.signup-form {
   left: 25%;
 }
 
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
+
 .container.signup-mode form.signin-form {
   z-index: 1;
   opacity: 0;
 }
 .container.signup-mode form.signup-form {
-  z-index: 2;
-  opacity: 1;
+  z-index: 1;
+  opacity: 2;
+}
+
+.container.signin-mode:before {
+  transform: translate(100%, -50%);
+  left: 52%;
 }
