@@ -102,6 +102,43 @@ nav {
 .login:hover {
   background: #0ea239;
 }
+
+.catagories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1rem;
+  background-color: rgb(197, 195, 195);
+  font-family: "Poppins", sans-serif;
+}
+
+.items {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.items li {
+  padding: 10px;
+  margin-left: 20px;
+  text-align: end;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.items a {
+  font-size: 8px;
+  color: rgb(68, 64, 64);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.items li:hover {
+  background-color: #00bf33;
+}
+.items a:hover {
+  color: white;
+}
+
 footer {
   width: 100%;
   bottom: 0;
