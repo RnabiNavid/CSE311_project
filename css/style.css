@@ -69,8 +69,9 @@ nav {
   padding: 10px 80px;
   border-radius: 10px;
   outline: 0;
-  text-align: center;
+  text-align: start;
 }
+
 .button {
   background: #00bf33;
   padding: 10px 50px;
@@ -82,13 +83,15 @@ nav {
   cursor: pointer;
   border-radius: 10px;
 }
+
 .login {
+  list-style: none;
   background: #00bf33;
   height: 40px;
   width: 40px;
   padding: 10px;
   margin-left: 20px;
-  margin-right: 2opx;
+  margin-right: 20px;
   border: none;
   outline: 0;
   color: #fff;
@@ -96,9 +99,41 @@ nav {
   cursor: pointer;
   border-radius: 10px;
 }
-.button:hover {
+.login i {
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+}
+.sub-menu {
+  display: none;
+}
+.login i :hover .sub-menu {
+  display: block;
+  position: absolute;
+  color: #fff;
+  margin: 10px;
+  background-color: rgb(18, 18, 19);
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.sub-menu ul {
+  display: block;
+  margin: 5px;
+  padding: 0;
+}
+.sub-menu ul li {
+  list-style: none;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 8px 58px;
+}
+
+.sub-menu ul li:hover {
   background: #0ea239;
 }
+
 .login:hover {
   background: #0ea239;
 }
