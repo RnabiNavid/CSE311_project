@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2022 at 09:25 PM
+-- Generation Time: Aug 25, 2022 at 01:19 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -71,21 +71,15 @@ CREATE TABLE `cart_owner` (
 
 CREATE TABLE `customer` (
   `C_ID` int(4) NOT NULL,
-  `Username` varchar(30) DEFAULT NULL,
-  `Country` varchar(30) DEFAULT NULL
+  `Username` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `customer_location`
+-- Dumping data for table `customer`
 --
 
-CREATE TABLE `customer_location` (
-  `Country` varchar(30) DEFAULT NULL,
-  `District` varchar(30) DEFAULT NULL,
-  `Address` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `customer` (`C_ID`, `Username`) VALUES
+(1001, 'Choco12');
 
 -- --------------------------------------------------------
 
@@ -107,12 +101,19 @@ CREATE TABLE `login` (
 --
 
 CREATE TABLE `person` (
-  `Username` varchar(20) DEFAULT NULL,
-  `Password` varchar(30) DEFAULT NULL,
+  `Username` varchar(30) DEFAULT NULL,
+  `Password` varchar(40) DEFAULT NULL,
   `Mobile_Number` int(11) DEFAULT NULL,
-  `Email` varchar(50) DEFAULT NULL,
-  `Country` varchar(20) DEFAULT NULL
+  `Email` varchar(40) DEFAULT NULL,
+  `Address` varchar(60) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `person`
+--
+
+INSERT INTO `person` (`Username`, `Password`, `Mobile_Number`, `Email`, `Address`) VALUES
+('Choco12', 'abcd001', 1700023232, 'Ahmed2@gmail.com', 'Rd#13, H#43, Gulshan-2, Dhaka');
 
 -- --------------------------------------------------------
 
@@ -137,6 +138,62 @@ CREATE TABLE `product_info` (
   `P_category` varchar(30) DEFAULT NULL,
   `P_price` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product_info`
+--
+
+INSERT INTO `product_info` (`Product_name`, `P_category`, `P_price`) VALUES
+('Sony WH-1000XM4', 'Headphone', 30000),
+('Sennheiser Momentum 4', 'Headphone', 35000),
+('Sony WH-1000XM5', 'Headphone', 25000),
+('Bowers & Wilkins PX7 Wireless', 'Headphone', 23000),
+('Plantronics BackBeat Go 810', 'Headphone', 15000),
+('AKG N60NC', 'Headphone', 10000),
+('Jabra Elite 45h', 'Headphone', 8000),
+('Sony WH-CH510', 'Headphone', 21000),
+('Beyerdynamic DT 1990 Pro', 'Headphone', 43000),
+('JBL Tune 750BTNC', 'Headphone', 10000),
+('Klipsch T5M Wired', 'Earphone', 9000),
+('SoundMagic E11C', 'Earphone', 8000),
+('Shure Aonic 3', 'Earphone', 12000),
+('Sennheiser IE 900', 'Earphone', 15000),
+('Sony WF-1000XM4', 'Earphone', 22000),
+('Panasonic RZ-S500W', 'Earphone', 13000),
+('Shure Aonic Free', 'Earphone', 19000),
+('Bose QuietComfort Earbuds', 'Earphone', 23000),
+('Sony WF-1000XM3', 'Earphone', 15000),
+('Airpods PRO', 'Earphone', 18000),
+('Anker PowerCore 20100', 'PowerBank', 9000),
+('Anker PowerCore III', 'PowerBank', 8000),
+('INIU 10000mAh', 'PowerBank', 12000),
+('Casely Power Pods', 'PowerBank', 15000),
+('Anker PowerCore II', 'PowerBank', 2000),
+('Mophie Powerstation Plus', 'PowerBank', 13000),
+('MAXOAK 50,000mAh', 'PowerBank', 19000),
+('Omni 20 USB-C', 'PowerBank', 23000),
+('iMuto 20,000mAh', 'PowerBank', 15000),
+('Anker PowerCore+ 26800', 'PowerBank', 8000),
+('Sonos Roam', 'Bluetooth Speakers', 9000),
+('Tribit Stormbox Micro 2', 'Bluetooth Speakers', 8000),
+('JBL Flip 6', 'Bluetooth Speakers', 12000),
+('B&O Beosound A1', 'Bluetooth Speakers', 15000),
+('JBL Charge 5', 'Bluetooth Speakers', 8000),
+('UE Hyperboom', 'Bluetooth Speakers', 18000),
+('Sonos Move', 'Bluetooth Speakers', 12000),
+('Anker Soundcore Flare 2', 'Bluetooth Speakers', 5000),
+('Ultimate Ears Boom 3', 'Bluetooth Speakers', 15000),
+('Bose SoundLink Flex', 'Bluetooth Speakers', 20000),
+('iPhone 13 Pro Max', 'Smart Phone', 130000),
+('Samsung Galaxy S22 Ultra', 'Smart Phone', 90000),
+('iPhone 13', 'Smart Phone', 84000),
+('Google Pixel 6', 'Smart Phone', 80000),
+('Google Pixel 6a', 'Smart Phone', 70000),
+('Samsung Galaxy A53', 'Smart Phone', 67000),
+('iPhone 13 Pro', 'Smart Phone', 90000),
+('OnePlus 10 Pro', 'Smart Phone', 60000),
+('Google Pixel 6 Pro', 'Smart Phone', 86000),
+('iPhone SE (2022)', 'Smart Phone', 60000);
 
 -- --------------------------------------------------------
 
@@ -175,7 +232,37 @@ INSERT INTO `product_list` (`Product_ID`, `Product_name`, `P_availability`, `A_I
 (20017, 'Shure Aonic Free', 'In Stock', 10069),
 (20018, 'Bose QuietComfort Earbuds', 'In Stock', 10069),
 (20019, 'Sony WF-1000XM3', 'In Stock', 10069),
-(20020, 'Airpods PRO', 'In Stock', 10069);
+(20020, 'Airpods PRO', 'In Stock', 10069),
+(20021, 'Anker PowerCore 20100', 'In Stock', 10069),
+(20022, 'Anker PowerCore III', 'Out of Stock', 10069),
+(20023, ' INIU 10000mAh', 'Out of Stock', 10069),
+(20024, 'Casely Power Pods', 'In Stock', 10069),
+(20025, 'Anker PowerCore II', 'In Stock', 10069),
+(20026, 'Mophie Powerstation Plus', 'In Stock', 10069),
+(20027, 'MAXOAK 50,000mAh', 'In Stock', 10069),
+(20028, 'Omni 20 USB-C', 'In Stock', 10069),
+(20029, 'iMuto 20,000mAh', 'In Stock', 10069),
+(20030, 'Anker PowerCore+ 26800', 'In Stock', 10069),
+(20031, 'Sonos Roam', 'In Stock', 10069),
+(20032, 'Tribit Stormbox Micro 2', 'Out of Stock', 10069),
+(20033, 'JBL Flip 6', 'Out of Stock', 10069),
+(20034, 'B&O Beosound A1', 'In Stock', 10069),
+(20035, 'JBL Charge 5', 'In Stock', 10069),
+(20036, 'UE Hyperboom', 'In Stock', 10069),
+(20037, 'Sonos Move', 'In Stock', 10069),
+(20038, 'Anker Soundcore Flare 2', 'In Stock', 10069),
+(20039, 'Ultimate Ears Boom 3', 'In Stock', 10069),
+(20040, 'Bose SoundLink Flex', 'In Stock', 10069),
+(20041, 'iPhone 13 Pro Max', 'In Stock', 10069),
+(20042, 'Samsung Galaxy S22 Ultra', 'Out of Stock', 10069),
+(20043, 'iPhone 13', 'Out of Stock', 10069),
+(20044, 'Google Pixel 6', 'In Stock', 10069),
+(20045, 'Google Pixel 6a', 'In Stock', 10069),
+(20046, 'Samsung Galaxy A53', 'In Stock', 10069),
+(20047, 'iPhone 13 Pro', 'In Stock', 10069),
+(20048, 'OnePlus 10 Pro', 'In Stock', 10069),
+(20049, 'Google Pixel 6 Pro', 'In Stock', 10069),
+(20050, 'iPhone SE (2022)', 'In Stock', 10069);
 
 -- --------------------------------------------------------
 
@@ -187,6 +274,13 @@ CREATE TABLE `webpage` (
   `A_ID` int(5) NOT NULL,
   `Domain_Name` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `webpage`
+--
+
+INSERT INTO `webpage` (`A_ID`, `Domain_Name`) VALUES
+(10069, 'GadgetSpace');
 
 --
 -- Indexes for dumped tables
