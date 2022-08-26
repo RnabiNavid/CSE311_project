@@ -24,18 +24,30 @@
           
         <ul class="nav-link">
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+              <li><a href="/html/login.html">login</a></li>
+               <li>
+                <div ><i class="fa-solid fa-user"></i></div>
+              </li>
         </ul>
-          <a href="./login.html"><button class="login" type="submit"><i class="fa-solid fa-user"></i></button></a>
-    </nav>
+           
+          
+          
+    
+       
+     
 
+    </nav>
     <div class="catagories">
       <ul class="items">
-           <li> <a href="#" class="phone"><h2>phone</h2></a></li> 
-           <li> <a href="#" class="case"><h2>phone Case</h2></a></li>
-           <li> <a href="#" class="Earphone"><h2>Earphones</h2></a></li>
-           <li> <a href="#" class="Charger"><h2>Charger</h2></a></li>
-           <li> <a href="#" class="powerbank"><h2>PowerBank</h2></a></li>
+           <li> <a href="product.php" class="phone"><h2>phone</h2></a></li> 
+           <li> <a href="product.php"class="case"><h2>phone Case</h2></a></li>
+           <li> <a href="product.php"class="Earphone"><h2>Earphones</h2></a></li>
+           <li> <a href="product.php"class="Charger"><h2>Charger</h2></a></li>
+           <li> <a href="product.php"class="powerbank"><h2>PowerBank</h2></a></li>
       </ul>
+
+ 
+    </div>
   </header>
 
  <main>
@@ -65,20 +77,27 @@
            <a class="whatsapp" href="https://www.whatsapp.web"><i class="fa-brands fa-whatsapp fa-2x" ></i></i></a>
            <a class="mail" href="https://www.gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
         </div>
+       
+       
+        <form name="massege" action="https://formspree.io/f/mpznwrvp" method="post">
         <div class="col">
           <h2>Contact us</h2>
+          <input type="text" id="name" name="name" placeholder="  Name">
+          <input type="email" id="mail" name="mail" placeholder="  Enter email" />
+          <textarea id="message" name="message" cols="30" rows="10" placeholder=" Message"></textarea>
+          <button type="submit">Send</i></button>
 
-          
-          <input type="email" placeholder="  Enter email" />
 
-            <textarea cols="30" rows="10"> Message *</textarea>
 
-            <button type="submit">Send</i></button>
-          </form>
-          </div>
-        </div>
+  
+  
+  
       </div>
-<script src="./app.js"></script>
+      </form>
+      
+    
+    </div>
+<script src="app.js"></script>
   </footer>
 
       

@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Gadget Space</title>
   </head>
 
@@ -24,31 +24,26 @@
           
         <ul class="nav-link">
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-              <li><a href="/html/login.html">login</a></li>
+              <li><a href="login.php">login</a></li>
+               <li>
+                <div ><i class="fa-solid fa-user"></i></div>
+              </li>
         </ul>
            
           
           
-      <ul class="drop">
-          <li class="login"><i class="fa-solid fa-user"></i></li>
-          <div class="sub-menu">
-            <ul>
-            <li><a href="#"></a><i class="fas fa-user"></i> profile</li>
-            <li><a href="#"></a><i class="fas fa-cog"></i> settings</li>
-            <li><a href="#"></a><i class="fas fa-sign-out"></i> Logout</li>
-            </ul>
-            
-          </div>
-       </ul>
+    
+       
+     
 
     </nav>
     <div class="catagories">
       <ul class="items">
-           <li> <a href="./product.html" class="phone"><h2>phone</h2></a></li> 
-           <li> <a href="./product.html"class="case"><h2>phone Case</h2></a></li>
-           <li> <a href="./product.html"class="Earphone"><h2>Earphones</h2></a></li>
-           <li> <a href="./product.html"class="Charger"><h2>Charger</h2></a></li>
-           <li> <a href="./product.html"class="powerbank"><h2>PowerBank</h2></a></li>
+           <li> <a href="product.php" class="phone"><h2>phone</h2></a></li> 
+           <li> <a href="product.php"class="case"><h2>phone Case</h2></a></li>
+           <li> <a href="product.php"class="Earphone"><h2>Earphones</h2></a></li>
+           <li> <a href="product.php"class="Charger"><h2>Charger</h2></a></li>
+           <li> <a href="product.php"class="powerbank"><h2>PowerBank</h2></a></li>
       </ul>
 
  
@@ -61,19 +56,19 @@
     <div class="img-slider">
 
       <div class="slide active">
-        <img src="/Img/slides/dell-banner-website-982x500.jpg"alt="slide1">
+        <img src="Img/slides/dell-banner-website-982x500.jpg"alt="slide1">
       </div>
      
       <div class="slide">
-        <img src="/Img/slides/maxgreen-laptop-adapter-982x500.jpg" alt="slide2">
+        <img src="Img/slides/maxgreen-laptop-adapter-982x500.jpg" alt="slide2">
       </div>
      
       <div class="slide">
-        <img src="/Img/slides/gamdias-gaming-chair-deal-offer-page-august-2022-982x500.jpg" alt="slide3">
+        <img src="Img/slides/gamdias-gaming-chair-deal-offer-page-august-2022-982x500.jpg" alt="slide3">
       </div>
      
       <div class="slide">
-        <img src="/Img/slides/huawei-matebook-d-home-banner-982x500.jpg" alt="slide4">
+        <img src="Img/slides/huawei-matebook-d-home-banner-982x500.jpg" alt="slide4">
       </div>
 
       
@@ -134,7 +129,7 @@
       
     
     </div>
-<script src="/js/app.js"></script>
+<script src="app.js"></script>
   </footer>
 
       
