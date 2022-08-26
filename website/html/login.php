@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>signin</title>
   </head>
   <body>
@@ -92,6 +92,6 @@
       </div>
    
 
-    <script src="/js/app.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>

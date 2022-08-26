@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Gadget Space</title>
   </head>
 
@@ -24,10 +24,8 @@
           
         <ul class="nav-link">
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-              <li><a href="login.php">login</a></li>
-               <li>
-                <div ><i class="fa-solid fa-user"></i></div>
-              </li>
+            <li><a href="../html/login.php">login</a></li>
+            <li><div ><i class="fa-solid fa-user"></i></div></li>
         </ul>
            
           
@@ -51,39 +49,7 @@
   </header>
 
  <main>
-  <section class="sliderbox">
-     
-    <div class="img-slider">
-
-      <div class="slide active">
-        <img src="Img/slides/dell-banner-website-982x500.jpg"alt="slide1">
-      </div>
-     
-      <div class="slide">
-        <img src="Img/slides/maxgreen-laptop-adapter-982x500.jpg" alt="slide2">
-      </div>
-     
-      <div class="slide">
-        <img src="Img/slides/gamdias-gaming-chair-deal-offer-page-august-2022-982x500.jpg" alt="slide3">
-      </div>
-     
-      <div class="slide">
-        <img src="Img/slides/huawei-matebook-d-home-banner-982x500.jpg" alt="slide4">
-      </div>
-
-      
-      <div class="navigation">
-        <div class="btn active"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        
-      </div>
-    </div>
-
-    
- 
-  </section>
+  
  </main>
  
 <footer>
