@@ -60,6 +60,9 @@ nav {
   text-decoration: none;
   letter-spacing: 3px;
 }
+.nav-link li i {
+  color: white;
+}
 .nav-link li:hover {
   background-color: #00bf33;
 }
@@ -218,6 +221,11 @@ footer {
 }
 .mail:hover {
   color: rgb(46, 193, 230);
+}
+
+.ap {
+  text-decoration: none;
+  color: white;
 }
 
 .col h2 {
@@ -634,4 +642,8 @@ form.signup-form {
 .container.signin-mode:before {
   transform: translate(100%, -50%);
   left: 52%;
+}
+
+.adminlog {
+  color: #000;
 }
