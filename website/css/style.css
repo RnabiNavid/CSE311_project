@@ -647,3 +647,8 @@ form.signup-form {
 .adminlog {
   color: #000;
 }
+
+.ck {
+  outline: none;
+  background: none;
+}

@@ -1,3 +1,15 @@
+<<?php 
+session_start();
+include ("conn.php");
+include("func.php");
+
+
+
+ ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,11 +67,17 @@
             <i class="fa-solid fa-lock"></i>
             <input type="password" placeholder="password" id="pass" name="pass" />
           </div>
+           
+          
+        <div class="check box">
+           <p><input type="checkbox" name="" onclick="shwpass()"> Show password</p>
+        </div>
+          
 
           <input type="submit" class="btn solid" value="Sign up" />
           <p class="social-text">or Sign in with social paltforms</p>
           <div class="social-media">
-            <a class="social-icon" href="https://www.facebook.com/navid.nabi.7/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-icon" href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
             <a class="social-icon" href="https://www.whatsapp.web"><i class="fa-brands fa-whatsapp "></i></i></a>
             <a class="social-icon" href="https://www.gmail.com"><i class="fa-solid fa-envelope "></i></a>
 

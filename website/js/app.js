@@ -60,3 +60,12 @@ signup_btn.addEventListener("click", () => {
 signin_btn.addEventListener("click", () => {
   container.classList.remove("signup-mode");
 });
+
+function shwpass() {
+  var show = document.getElementById("pass");
+  if (show.Type == "password") {
+    show.Type = "text";
+  } else {
+    show.Type = "password";
+  }
+}
