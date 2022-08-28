@@ -31,14 +31,11 @@ require_once'functions.inc.php';
 	exit();
    }
 
-   if (UnameExists($conn,$Uname) !== false) {
+   if (UnameExists($conn,$Uname,$Email) !== false) {
 	header("location: ../html/login.php?error=usernameExist");
 	exit();
    }
-
-
 createUser($conn,($Uname,$Email,$Address,$Pwd);
-
 
 }
   else{
