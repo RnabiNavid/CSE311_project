@@ -1,9 +1,8 @@
-<<?php 
+<?php 
 session_start();
-include ("conn.php");
-include("func.php");
 
-$user_data= check_login($con);
+
+
 
  ?>
 

@@ -1,14 +1,13 @@
 <<?php 
 
-$dbhost="localhost";
-$dbuser="root";
-$dbpass="";
-$dbname="login_sample_db";
+$serverName="localhost";
+$dBUser="root";
+$dBPass="";
+$dBName="login_sample_db";
 
-if(!$con=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname)){
+$conn = mysqli_connect('$serverName','$dBUser','$dBPass','$dBName');
 
-die("failed to mysqli_connect");
+if (!$conn) {
+
+    die("connection failed :" . mysqli_connect_error());
 }
-
-
- 

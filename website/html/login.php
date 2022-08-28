@@ -1,11 +1,14 @@
-<<?php 
+
+
+
+<?php 
 session_start();
-include ("conn.php");
-include("func.php");
 
 
+  
+   ?>
 
- ?>
+
 
 
 
@@ -27,7 +30,7 @@ include("func.php");
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="#" class="signin-form">
+        <form action="login.inc.php" class="signin-form">
           <h2 class="title">Sign In</h2>
           <div class="input-field">
             <i class="fa-solid fa-user"></i>
@@ -48,7 +51,7 @@ include("func.php");
         </form>
 
 
-        <form action="signup.php" class="signup-form">
+        <form action="signup.inc.php" class="signup-form" method="post">
 
           <h2 class="title">Sign up</h2>
           <div class="input-field">
@@ -67,11 +70,13 @@ include("func.php");
             <i class="fa-solid fa-lock"></i>
             <input type="password" placeholder="password" id="pass" name="pass" />
           </div>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Re-type password" id="Rpass" name="Rpass" />
+          </div>
            
           
-        <div class="check box">
-           <p><input type="checkbox" name="" onclick="shwpass()"> Show password</p>
-        </div>
+       
           
 
           <input type="submit" class="btn solid" value="Sign up" />
@@ -94,7 +99,7 @@ include("func.php");
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatum vitae ad hic ab tenetur perferendis, possimus optio quisquam itaque? Molestias illo ipsam facilis. Nemo excepturi exercitationem vitae magni maxime.</p>
           <button class="btn transparent" id="signup-btn">sign up</button>
         </div>
-        <img src="./Img/svgs/undraw_video_game_night_8h8m.svg" alt="" class="img">
+        <img src="../Img/svgs/undraw_video_game_night_8h8m.svg" alt="" class="img">
       </div>
 
       <div class="panel right-panel">
@@ -103,7 +108,7 @@ include("func.php");
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatum vitae ad hic ab tenetur perferendis, possimus optio quisquam itaque? Molestias illo ipsam facilis. Nemo excepturi exercitationem vitae magni maxime.</p>
           <button class="btn transparent" id="signin-btn">sign in</button>
         </div>
-        <img src="./Img/svgs/undraw_join_re_w1lh.svg" alt="" class="img">
+        <img src="../Img/svgs/undraw_join_re_w1lh.svg" alt="" class="img">
       </div>
     </div>
   </div>
