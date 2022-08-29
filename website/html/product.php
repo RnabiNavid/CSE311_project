@@ -29,7 +29,7 @@ include ("conn.php");
     <header>
       <nav>
         
-          <a href="./index.html"class="logo"><h1>Gadget<span>Space</span></h1></a>
+          <a href="../html/index.php"class="logo"><h1>Gadget<span>Space</span></h1></a>
           <input class="searchbar" type="text" placeholder="Search" />
           <button class="button" type="submit">Search</button>
           

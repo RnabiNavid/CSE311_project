@@ -109,7 +109,7 @@ if(isset($_GET["action"]))
 						<th width="40%">Item Name</th>
 						<th width="10%">Quantity</th>
 						<th width="20%">Price</th>
- 						<th width="15%">Total</th>
+						<th width="15%">Total</th>
 						<th width="5%">Action</th>
 					</tr>
 					<?php

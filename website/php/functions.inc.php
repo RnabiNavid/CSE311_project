@@ -56,12 +56,12 @@ function PwdMatch($Pwd,$RepeatPwd){
 
 
 function UnameExists($conn,$Uname,$Email){
-	    $sql="SELECT* FROM usertable WHERE user_name=? OR email=?;";
+	    $sql="SELECT* FROM person WHERE user_name=? OR email=?;";
 	    $stmt=mysqli_stmt_init($conn);
 	  
 
 	    if(!mysqli_stmt_prepare($stmt,$sql)){
-  	header("location: ../html/login.php?error=stmtfailed1");
+  	header("location: ../html/login.php?error=stmtfailed");
           exit();
 	    }
         mysqli_stmt_bind_param($stmt,"ss",$Uname,$Email);
@@ -87,7 +87,7 @@ return $row;
 
 
 function createUser($conn,$Uname,$Email,$Address,$Pwd){
-        $sql="INSERT INTO usertable (user_name,email,address,password) VALUES(?,?,?,?)";
+        $sql="INSERT INTO person (user_name,email,address,password) VALUES(?,?,?,?)";
         $stmt=mysqli_stmt_init($conn);
  
 

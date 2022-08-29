@@ -1,3 +1,14 @@
+
+<?php 
+session_start();
+include ("conn.php");
+
+
+
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +29,7 @@
     <header>
       <nav>
         
-          <a href="./index.html"class="logo"><h1>Gadget<span>Space</span></h1></a>
+          <a href="index.php"class="logo"><h1>Gadget<span>Space</span></h1></a>
           <input class="searchbar" type="text" placeholder="Search" />
           <button class="button" type="submit">Search</button>
           
@@ -27,69 +38,92 @@
             <li><a href="../html/login.php">login</a></li>
             <li><div ><i class="fa-solid fa-user"></i></div></li>
         </ul>
-           
-          
-          
-    
-       
-     
-
     </nav>
-    <div class="catagories">
-      <ul class="items">
-           <li> <a href="product.php" class="phone"><h2>phone</h2></a></li> 
-           <li> <a href="product.php"class="case"><h2>phone Case</h2></a></li>
-           <li> <a href="product.php"class="Earphone"><h2>Earphones</h2></a></li>
-           <li> <a href="product.php"class="Charger"><h2>Charger</h2></a></li>
-           <li> <a href="product.php"class="powerbank"><h2>PowerBank</h2></a></li>
-      </ul>
-
- 
-    </div>
+    
   </header>
 
  <main>
- 	<div class="order_table">
-  <h3>Order Details</h3>
-			<div class="table-responsive">
-				<table class="table table-bordered">
-					<tr>
-						<th width="40%">Item Name</th>
-						<th width="10%">Quantity</th>
-						<th width="20%">Price</th>
- 						<th width="15%">Total</th>
-						<th width="5%">Action</th>
-					</tr>
-					<?php
-					if(!empty($_SESSION["shopping_cart"]))
-					{
-						$total = 0;
-						foreach($_SESSION["shopping_cart"] as $keys => $values)
-						{
-					?>
-					<tr>
-						<td><?php echo $values["item_name"]; ?></td>
-						<td><?php echo $values["item_quantity"]; ?></td>
-						<td>$ <?php echo $values["item_price"]; ?></td>
-						<td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
-						<td><a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
-					</tr>
-					<?php
-							$total = $total + ($values["item_quantity"] * $values["item_price"]);
-						}
-					?>
-					<tr>
-						<td colspan="3" align="right">Total</td>
-						<td align="right">$ <?php echo number_format($total, 2); ?></td>
-						<td></td>
-					</tr>
-					<?php
-					}
-					?>
-						
-				</table>
-			</div>
-		</div>
+  <div class="containner">
+      <br />
+      <br />
+      <br />
+      <h3 align="center">Tuto - <a href="http://www.webslesson.info/2016/08/simple-php-mysql-shopping-cart.html" title="My Cart">My Cart</a></h3><br />
+      <br /><br />
+      <?php
+        $query = "SELECT * FROM tbl_product ORDER BY id ASC";
+        $result = mysqli_query($connect, $query);
+        if(mysqli_num_rows($result) > 0)
+        {
+          while($row = mysqli_fetch_array($result))
+          {
+        ?>
+      <div class="col-md-4">
+        <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
+          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
+            <img src="images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+
+            <h4 class="text-info"><?php echo $row["name"]; ?></h4>
+
+            <h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
+
+            <input type="text" name="quantity" value="1" class="form-control" />
+
+            <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+
+            <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+
+            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+
+          </div>
+        </form>
+      </div>
+      <?php
+          }
+        }
+      ?>
+      <div style="clear:both"></div>
+      <br />
+      <h3>Order Details</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <tr>
+            <th width="40%">Item Name</th>
+            <th width="10%">Quantity</th>
+            <th width="20%">Price</th>
+            <th width="15%">Total</th>
+            <th width="5%">Action</th>
+          </tr>
+          <?php
+          if(!empty($_SESSION["shopping_cart"]))
+          {
+            $total = 0;
+            foreach($_SESSION["shopping_cart"] as $keys => $values)
+            {
+          ?>
+          <tr>
+            <td><?php echo $values["item_name"]; ?></td>
+            <td><?php echo $values["item_quantity"]; ?></td>
+            <td>$ <?php echo $values["item_price"]; ?></td>
+            <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+            <td><a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+          </tr>
+          <?php
+              $total = $total + ($values["item_quantity"] * $values["item_price"]);
+            }
+          ?>
+          <tr>
+            <td colspan="3" align="right">Total</td>
+            <td align="right">$ <?php echo number_format($total, 2); ?></td>
+            <td></td>
+          </tr>
+          <?php
+          }
+          ?>
+            
+        </table>
+      </div>
+    </div>
+  </div>
  </main>
  
 <footer>

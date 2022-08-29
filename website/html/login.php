@@ -9,10 +9,6 @@ session_start();
    ?>
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,11 +30,11 @@ session_start();
           <h2 class="title">Sign In</h2>
           <div class="input-field">
             <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Username" name="usrname" />
           </div>
           <div class="input-field">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="password" />
+            <input type="password" placeholder="password" name="pas" />
           </div>
 
           <button type="submit" class="btn solid" >Log In</button>
@@ -89,6 +85,7 @@ session_start();
         </form>
 
       </div>
+
     </div>
     <div class="panels-container">
 
@@ -97,6 +94,38 @@ session_start();
         <div class="content">
           <h3>New here</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatum vitae ad hic ab tenetur perferendis, possimus optio quisquam itaque? Molestias illo ipsam facilis. Nemo excepturi exercitationem vitae magni maxime.</p>
+                        <?php 
+
+if (isset($_GET["error"])) {
+  if ($_GET["error"]=="emptyinput") {
+    echo "<p>Fill In All User Field</p>";
+  }
+  elseif ($_GET["error"]=="invalidUname") {
+    echo "<p>Choose a proper user name</p>";
+  }
+    elseif ($_GET["error"]=="invalidEmail") {
+    echo "<p>Choose a proper Email</p>";
+  }
+
+  elseif ($_GET["error"]=="Passwordsnotmatch") {
+    echo "<p>Check your password</p>";
+  }
+  elseif ($_GET["error"]=="stmtfailed") {
+    echo "<p>Something went wrong </p>";
+  }
+    elseif ($_GET["error"]=="usernameExist") {
+    echo "<p>User name alrady taken </p>";
+  }
+    elseif ($_GET["error"]=="none") {
+    echo "<h3> You have signup </h3>";
+  }
+
+}
+
+?>
+
+          <br>
+          <br>
           <button class="btn transparent" id="signup-btn">sign up</button>
         </div>
         <img src="../Img/svgs/undraw_video_game_night_8h8m.svg" alt="" class="img">
@@ -106,12 +135,15 @@ session_start();
         <div class="content">
           <h3>one of us ?</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatum vitae ad hic ab tenetur perferendis, possimus optio quisquam itaque? Molestias illo ipsam facilis. Nemo excepturi exercitationem vitae magni maxime.</p>
+  
           <button class="btn transparent" id="signin-btn">sign in</button>
         </div>
         <img src="../Img/svgs/undraw_join_re_w1lh.svg" alt="" class="img">
       </div>
     </div>
   </div>
+
+
 
 
   <script src="../js/app.js"></script>

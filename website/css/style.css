@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#main{
+  padding: 0px 110px;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -653,7 +655,3 @@ form.signup-form {
   background: none;
 }
 
-.order_table{
-  color: black;
-  background: red;
-}

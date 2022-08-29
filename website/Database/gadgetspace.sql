@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2022 at 01:19 PM
+-- Generation Time: Aug 28, 2022 at 05:40 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -205,64 +205,65 @@ CREATE TABLE `product_list` (
   `Product_ID` int(5) NOT NULL,
   `Product_name` varchar(30) DEFAULT NULL,
   `P_availability` varchar(30) DEFAULT NULL,
-  `A_ID` int(5) DEFAULT NULL
+  `A_ID` int(5) DEFAULT NULL,
+  `IMG` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product_list`
 --
 
-INSERT INTO `product_list` (`Product_ID`, `Product_name`, `P_availability`, `A_ID`) VALUES
-(20001, 'Sony WH-1000XM4', 'In Stock', 10069),
-(20002, 'Sennheiser Momentum 4', 'Out of Stock', 10069),
-(20003, 'Sony WH-1000XM5', 'Out of Stock', 10069),
-(20004, 'Bowers & Wilkins PX7 Wireless', 'In Stock', 10069),
-(20005, 'Plantronics BackBeat Go 810', 'In Stock', 10069),
-(20006, 'AKG N60NC', 'In Stock', 10069),
-(20007, 'Jabra Elite 45h', 'In Stock', 10069),
-(20008, 'Sony WH-CH510', 'In Stock', 10069),
-(20009, 'Beyerdynamic DT 1990 Pro', 'In Stock', 10069),
-(20010, 'JBL Tune 750BTNC', 'In Stock', 10069),
-(20011, 'Klipsch T5M Wired', 'In Stock', 10069),
-(20012, 'SoundMagic E11C', 'Out of Stock', 10069),
-(20013, 'Shure Aonic 3', 'Out of Stock', 10069),
-(20014, 'Sennheiser IE 900', 'In Stock', 10069),
-(20015, 'Sony WF-1000XM4', 'In Stock', 10069),
-(20016, 'Panasonic RZ-S500W', 'In Stock', 10069),
-(20017, 'Shure Aonic Free', 'In Stock', 10069),
-(20018, 'Bose QuietComfort Earbuds', 'In Stock', 10069),
-(20019, 'Sony WF-1000XM3', 'In Stock', 10069),
-(20020, 'Airpods PRO', 'In Stock', 10069),
-(20021, 'Anker PowerCore 20100', 'In Stock', 10069),
-(20022, 'Anker PowerCore III', 'Out of Stock', 10069),
-(20023, ' INIU 10000mAh', 'Out of Stock', 10069),
-(20024, 'Casely Power Pods', 'In Stock', 10069),
-(20025, 'Anker PowerCore II', 'In Stock', 10069),
-(20026, 'Mophie Powerstation Plus', 'In Stock', 10069),
-(20027, 'MAXOAK 50,000mAh', 'In Stock', 10069),
-(20028, 'Omni 20 USB-C', 'In Stock', 10069),
-(20029, 'iMuto 20,000mAh', 'In Stock', 10069),
-(20030, 'Anker PowerCore+ 26800', 'In Stock', 10069),
-(20031, 'Sonos Roam', 'In Stock', 10069),
-(20032, 'Tribit Stormbox Micro 2', 'Out of Stock', 10069),
-(20033, 'JBL Flip 6', 'Out of Stock', 10069),
-(20034, 'B&O Beosound A1', 'In Stock', 10069),
-(20035, 'JBL Charge 5', 'In Stock', 10069),
-(20036, 'UE Hyperboom', 'In Stock', 10069),
-(20037, 'Sonos Move', 'In Stock', 10069),
-(20038, 'Anker Soundcore Flare 2', 'In Stock', 10069),
-(20039, 'Ultimate Ears Boom 3', 'In Stock', 10069),
-(20040, 'Bose SoundLink Flex', 'In Stock', 10069),
-(20041, 'iPhone 13 Pro Max', 'In Stock', 10069),
-(20042, 'Samsung Galaxy S22 Ultra', 'Out of Stock', 10069),
-(20043, 'iPhone 13', 'Out of Stock', 10069),
-(20044, 'Google Pixel 6', 'In Stock', 10069),
-(20045, 'Google Pixel 6a', 'In Stock', 10069),
-(20046, 'Samsung Galaxy A53', 'In Stock', 10069),
-(20047, 'iPhone 13 Pro', 'In Stock', 10069),
-(20048, 'OnePlus 10 Pro', 'In Stock', 10069),
-(20049, 'Google Pixel 6 Pro', 'In Stock', 10069),
-(20050, 'iPhone SE (2022)', 'In Stock', 10069);
+INSERT INTO `product_list` (`Product_ID`, `Product_name`, `P_availability`, `A_ID`, `IMG`) VALUES
+(20001, 'Sony WH-1000XM4', 'In Stock', 10069, NULL),
+(20002, 'Sennheiser Momentum 4', 'Out of Stock', 10069, NULL),
+(20003, 'Sony WH-1000XM5', 'Out of Stock', 10069, NULL),
+(20004, 'Bowers & Wilkins PX7 Wireless', 'In Stock', 10069, NULL),
+(20005, 'Plantronics BackBeat Go 810', 'In Stock', 10069, NULL),
+(20006, 'AKG N60NC', 'In Stock', 10069, NULL),
+(20007, 'Jabra Elite 45h', 'In Stock', 10069, NULL),
+(20008, 'Sony WH-CH510', 'In Stock', 10069, NULL),
+(20009, 'Beyerdynamic DT 1990 Pro', 'In Stock', 10069, NULL),
+(20010, 'JBL Tune 750BTNC', 'In Stock', 10069, NULL),
+(20011, 'Klipsch T5M Wired', 'In Stock', 10069, NULL),
+(20012, 'SoundMagic E11C', 'Out of Stock', 10069, NULL),
+(20013, 'Shure Aonic 3', 'Out of Stock', 10069, NULL),
+(20014, 'Sennheiser IE 900', 'In Stock', 10069, NULL),
+(20015, 'Sony WF-1000XM4', 'In Stock', 10069, NULL),
+(20016, 'Panasonic RZ-S500W', 'In Stock', 10069, NULL),
+(20017, 'Shure Aonic Free', 'In Stock', 10069, NULL),
+(20018, 'Bose QuietComfort Earbuds', 'In Stock', 10069, NULL),
+(20019, 'Sony WF-1000XM3', 'In Stock', 10069, NULL),
+(20020, 'Airpods PRO', 'In Stock', 10069, NULL),
+(20021, 'Anker PowerCore 20100', 'In Stock', 10069, NULL),
+(20022, 'Anker PowerCore III', 'Out of Stock', 10069, NULL),
+(20023, ' INIU 10000mAh', 'Out of Stock', 10069, NULL),
+(20024, 'Casely Power Pods', 'In Stock', 10069, NULL),
+(20025, 'Anker PowerCore II', 'In Stock', 10069, NULL),
+(20026, 'Mophie Powerstation Plus', 'In Stock', 10069, NULL),
+(20027, 'MAXOAK 50,000mAh', 'In Stock', 10069, NULL),
+(20028, 'Omni 20 USB-C', 'In Stock', 10069, NULL),
+(20029, 'iMuto 20,000mAh', 'In Stock', 10069, NULL),
+(20030, 'Anker PowerCore+ 26800', 'In Stock', 10069, NULL),
+(20031, 'Sonos Roam', 'In Stock', 10069, NULL),
+(20032, 'Tribit Stormbox Micro 2', 'Out of Stock', 10069, NULL),
+(20033, 'JBL Flip 6', 'Out of Stock', 10069, NULL),
+(20034, 'B&O Beosound A1', 'In Stock', 10069, NULL),
+(20035, 'JBL Charge 5', 'In Stock', 10069, NULL),
+(20036, 'UE Hyperboom', 'In Stock', 10069, NULL),
+(20037, 'Sonos Move', 'In Stock', 10069, NULL),
+(20038, 'Anker Soundcore Flare 2', 'In Stock', 10069, NULL),
+(20039, 'Ultimate Ears Boom 3', 'In Stock', 10069, NULL),
+(20040, 'Bose SoundLink Flex', 'In Stock', 10069, NULL),
+(20041, 'iPhone 13 Pro Max', 'In Stock', 10069, NULL),
+(20042, 'Samsung Galaxy S22 Ultra', 'Out of Stock', 10069, NULL),
+(20043, 'iPhone 13', 'Out of Stock', 10069, NULL),
+(20044, 'Google Pixel 6', 'In Stock', 10069, NULL),
+(20045, 'Google Pixel 6a', 'In Stock', 10069, NULL),
+(20046, 'Samsung Galaxy A53', 'In Stock', 10069, NULL),
+(20047, 'iPhone 13 Pro', 'In Stock', 10069, NULL),
+(20048, 'OnePlus 10 Pro', 'In Stock', 10069, NULL),
+(20049, 'Google Pixel 6 Pro', 'In Stock', 10069, NULL),
+(20050, 'iPhone SE (2022)', 'In Stock', 10069, NULL);
 
 -- --------------------------------------------------------
 
