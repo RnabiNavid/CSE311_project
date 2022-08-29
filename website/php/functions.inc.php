@@ -60,12 +60,14 @@ function UnameExists($conn,$Uname,$Email){
 	    $stmt=mysqli_stmt_init($conn);
 	  
 
-	    if(mysqli_stmt_prepare($stmt,$sql)){
-  	header("location: ../html/login.php?error=stmtfailed");
+	    if(!mysqli_stmt_prepare($stmt,$sql)){
+  	header("location: ../html/login.php?error=stmtfailed1");
           exit();
 	    }
         mysqli_stmt_bind_param($stmt,"ss",$Uname,$Email);
-        mysqli_stmt_exexute($stmt);
+        
+        
+        mysqli_stmt_execute($stmt);
 
  $resultData=mysqli_stmt_get_result($stmt);
 
@@ -85,7 +87,7 @@ return $row;
 
 
 function createUser($conn,$Uname,$Email,$Address,$Pwd){
-        $sql="INSERT INTO usertable (user_name,email,address,password) VALUES(?,?,?,?);";
+        $sql="INSERT INTO usertable (user_name,email,address,password) VALUES(?,?,?,?)";
         $stmt=mysqli_stmt_init($conn);
  
 
@@ -96,8 +98,8 @@ function createUser($conn,$Uname,$Email,$Address,$Pwd){
       
       $hashedPWD = password_hash($Pwd, PASSWORD_DEFAULT);
 
-        mysqli_stmt_bind_param($stmt,'ssss',$Uname,$Email,$Address,$Pwd);
-        mysqli_stmt_exexute($stmt);
+        mysqli_stmt_bind_param($stmt,'ssss',$Uname,$Email,$Address,$hashedPWD);
+        mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         header("location: ../html/login.php?error=none");
         exit();
