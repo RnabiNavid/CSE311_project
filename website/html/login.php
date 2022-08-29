@@ -41,7 +41,7 @@ session_start();
             <input type="password" placeholder="password" />
           </div>
 
-          <input type="submit" class="btn solid" value="Login" />
+          <button type="submit" class="btn solid" >Log In</button>
           <p class="social-text">or Sign in with social paltforms</p>
           <div class="social-media">
             <a class="social-icon" href="https://www.facebook.com/navid.nabi.7/"><i class="fa-brands fa-facebook-f"></i></i></a>
@@ -51,12 +51,12 @@ session_start();
         </form>
 
 
-        <form action="signup.inc.php" class="signup-form" method="post">
+        <form action="../php/signup.inc.php" class="signup-form" method="post">
 
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="Username" id="usename" name="username" />
+            <input type="text" placeholder="Username" id="username" name="username" />
           </div>
           <div class="input-field">
             <i class="fa-solid fa-envelope"></i>
@@ -76,10 +76,10 @@ session_start();
           </div>
            
           
-       
+       <button>
           
 
-          <input type="submit" class="btn solid" value="Sign up" />
+          <button type="submit" class="btn solid"  />Sign up</button>
           <p class="social-text">or Sign in with social paltforms</p>
           <div class="social-media">
             <a class="social-icon" href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>

@@ -58,7 +58,7 @@ function PwdMatch($Pwd,$RepeatPwd){
 function UnameExists($conn,$Uname,$Email){
 	    $sql="SELECT* FROM usertable WHERE user_name=? OR email=?;";
 	    $stmt=mysqli_stmt_init($conn);
-	    $result;
+	  
 
 	    if(mysqli_stmt_prepare($stmt,$sql)){
   	header("location: ../html/login.php?error=stmtfailed");
@@ -70,10 +70,36 @@ function UnameExists($conn,$Uname,$Email){
  $resultData=mysqli_stmt_get_result($stmt);
 
  if(mysqli_fetch_assoc($resultData)){
+return $row;
 
  }
  else{
  	$result=false;
- 	return$result;
+ 	return $result;
  }
+ mysqli_stmt_close($stmt);
+}
+
+
+
+
+
+function createUser($conn,$Uname,$Email,$Address,$Pwd){
+        $sql="INSERT INTO usertable (user_name,email,address,password) VALUES(?,?,?,?);";
+        $stmt=mysqli_stmt_init($conn);
+ 
+
+        if(!mysqli_stmt_prepare($stmt,$sql)){
+    header("location: ../html/login.php?error=stmtfailed");
+          exit();
+        }
+      
+      $hashedPWD = password_hash($Pwd, PASSWORD_DEFAULT);
+
+        mysqli_stmt_bind_param($stmt,'ssss',$Uname,$Email,$Address,$Pwd);
+        mysqli_stmt_exexute($stmt);
+        mysqli_stmt_close($stmt);
+        header("location: ../html/login.php?error=none");
+        exit();
+
 }

@@ -1,14 +1,16 @@
 <?php
 
-if (isset($_POST["submit"])) {
-	
-$Uname =$_POST["usename"];
-$Email =$_POST["email"];
-$Address =$_POST["address"];
-$Pwd =$_POST["pass"];
-$RepeatPwd =$_POST["Rpass"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-require_once'conn.php';
+$Uname = $_POST["username"];
+$Email = $_POST["email"];
+$Address = $_POST["address"];
+$Pwd = $_POST["pass"];
+$RepeatPwd = $_POST["Rpass"];
+
+
+
+require_once'../html/conn.php';
 require_once'functions.inc.php';
 
    if (emptyInputSignup($Uname,$Email,$Address,$Pwd,$RepeatPwd) !== false) {
@@ -35,10 +37,12 @@ require_once'functions.inc.php';
 	header("location: ../html/login.php?error=usernameExist");
 	exit();
    }
-createUser($conn,($Uname,$Email,$Address,$Pwd);
 
+createUser($conn,$Uname,$Email,$Address,$Pwd);
 }
-  else{
+else{
+       
+      
   	header("location: ../html/login.php");
   	exit();
-  }
+   }
