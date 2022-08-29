@@ -26,7 +26,7 @@ session_start();
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="login.inc.php" class="signin-form">
+        <form action="../php/login.inc.php" class="signin-form">
           <h2 class="title">Sign In</h2>
           <div class="input-field">
             <i class="fa-solid fa-user"></i>
@@ -137,6 +137,7 @@ if (isset($_GET["error"])) {
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatum vitae ad hic ab tenetur perferendis, possimus optio quisquam itaque? Molestias illo ipsam facilis. Nemo excepturi exercitationem vitae magni maxime.</p>
   
           <button class="btn transparent" id="signin-btn">sign in</button>
+          <br><br><br><a href="../html/index.php" class="likk">Back to homepage</a>
         </div>
         <img src="../Img/svgs/undraw_join_re_w1lh.svg" alt="" class="img">
       </div>

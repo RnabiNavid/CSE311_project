@@ -36,7 +36,19 @@ session_start();
 
       <ul class="nav-link">
         <li><a href="../html/shoppingcart.php"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-        <li><a href="../html/login.php">login</a></li>
+        
+
+      <<?php 
+         if (isset($_SESSION["Useruid"])) {
+           echo " <li><a href='../html/login.php'>logout</a></li> ";
+         }
+        else{
+          echo " <li><a href='../html/login.php'> login</a></li> ";
+        }
+       ?>
+
+
+         
         <li>
           <div><i class="fa-solid fa-user"></i></div>
         </li>

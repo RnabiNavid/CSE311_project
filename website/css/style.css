@@ -581,6 +581,11 @@ form.signup-form {
   font-size: 0.95rem;
   padding: 0.7rem 0;
 }
+.panel .likk{
+  color: limegreen;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
 .btn.transparent {
   margin: 0;
   background: none;
