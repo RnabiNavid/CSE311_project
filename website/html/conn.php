@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 
 $serverName="localhost";
 $dBUser="root";

@@ -69,7 +69,7 @@ if(isset($_GET["action"]))
 			<h3 align="center">Tuto - <a href="http://www.webslesson.info/2016/08/simple-php-mysql-shopping-cart.html" title="My Cart">My Cart</a></h3><br />
 			<br /><br />
 			<?php
-				$query = "SELECT * FROM cart_product ORDER BY id ASC";
+				$query = "SELECT * FROM tbl_product ORDER BY id ASC";
 				$result = mysqli_query($connect, $query);
 				if(mysqli_num_rows($result) > 0)
 				{
@@ -109,7 +109,7 @@ if(isset($_GET["action"]))
 						<th width="40%">Item Name</th>
 						<th width="10%">Quantity</th>
 						<th width="20%">Price</th>
-						<th width="15%">Total</th>
+ 						<th width="15%">Total</th>
 						<th width="5%">Action</th>
 					</tr>
 					<?php
