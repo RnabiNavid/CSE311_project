@@ -135,7 +135,25 @@ if (isset($_GET["error"])) {
         <div class="content">
           <h3>one of us ?</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptatum vitae ad hic ab tenetur perferendis, possimus optio quisquam itaque? Molestias illo ipsam facilis. Nemo excepturi exercitationem vitae magni maxime.</p>
-  
+   <?php 
+
+if (isset($_GET["error"])) {
+  if ($_GET["error"]=="emptyinput") {
+    echo "<p>Fill In All User Field</p>";
+  }
+  elseif ($_GET["error"]=="invalidUname") {
+    echo "<p>Invalid user name or Password</p>";
+  }
+    elseif ($_GET["error"]=="none") {
+    echo "<h3> You are signed in </h3>";
+  }
+
+}
+
+?>
+
+
+
           <button class="btn transparent" id="signin-btn">sign in</button>
           <br><br><br><a href="../html/index.php" class="likk">Back to homepage</a>
         </div>
