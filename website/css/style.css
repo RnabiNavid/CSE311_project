@@ -148,7 +148,7 @@ nav {
   justify-content: center;
   align-items: center;
   min-height: 1rem;
-  background-color: rgb(197, 195, 195);
+  background: rgb(122, 121, 121);
   font-family: "Poppins", sans-serif;
 }
 
@@ -168,7 +168,7 @@ nav {
 
 .items a {
   font-size: 8px;
-  color: rgb(68, 64, 64);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   letter-spacing: 1px;
 }

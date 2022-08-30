@@ -35,7 +35,7 @@ session_start();
       <button class="button" type="submit">Search</button>
 
       <ul class="nav-link">
-        <li><a href="../html/shoppingcart.php"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="./cart.php"><i class="fas fa-shopping-cart"></i> Cart</a></li>
         
 
       <<?php 
