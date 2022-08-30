@@ -142,14 +142,13 @@ session_start();
         <a class="facebook" href="https://www.facebook.com/navid.nabi.7/"><i class="fa-brands fa-facebook fa-2x"></i></a>
         <a class="whatsapp" href="https://www.whatsapp.web"><i class="fa-brands fa-whatsapp fa-2x"></i></i></a>
         <a class="mail" href="https://www.gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a><br><br>
-        <!-- <a class="whatsapp" href="#"> admin panel </a> -->
- <!-- admin page -->
+       <a class="whatsapp" href="/CSE311_project//admin/login.php"> admin panel </a>
     <?php
 $name='naid';
 if ($name=='navid') {
-echo  '<a class="whatsapp" href="#"> admin panel </a>';
+echo  '<a class="whatsapp" href="/admin/login.php"> admin panel </a>';
 }
-?>
+?> 
       </div>
 
 

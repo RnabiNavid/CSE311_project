@@ -3,7 +3,7 @@
 $serverName="localhost";
 $dBUser="root";
 $dBPass="";
-$dBName="311pro";
+$dBName="ecommerceapp";
 
 $conn = mysqli_connect("$serverName","$dBUser","$dBPass","$dBName");
 
