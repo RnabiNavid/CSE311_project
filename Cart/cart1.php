@@ -1,7 +1,6 @@
 <?php 
-/* code by webdevtrick ( https://webdevtrick.com ) */
 session_start();
-$connect = mysqli_connect("localhost", "root", "", "testing");
+$connect = mysqli_connect("localhost", "root", "", "ecommerceapp");
 
 if(isset($_POST["add_to_cart"]))
 {
@@ -56,7 +55,7 @@ if(isset($_GET["action"]))
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Shopping Cart In PHP and MySql | Webdevtrick.com</title>
+		<title>Gadgetspace Cart</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -67,10 +66,10 @@ if(isset($_GET["action"]))
 			<br />
 			<br />
 			<br />
-			<h3 align="center">Shoping Cart With PHP And MySql | Source Code By <a href="https://webdevtrick.com">Webdevtrick.com</a></h3><br />
+			<h3 align="center">Tuto - <a href="http://www.webslesson.info/2016/08/simple-php-mysql-shopping-cart.html" title="My Cart">My Cart</a></h3><br />
 			<br /><br />
 			<?php
-				$query = "SELECT * FROM tbl_product ORDER BY id ASC";
+				$query = "SELECT * FROM products ORDER BY product_id ASC";
 				$result = mysqli_query($connect, $query);
 				if(mysqli_num_rows($result) > 0)
 				{
@@ -78,19 +77,19 @@ if(isset($_GET["action"]))
 					{
 				?>
 			<div class="col-md-4">
-				<form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
-					<div style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
-						<img src="CSE311_PROJECT/Product_image/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+				<form method="post" action="index.php?action=add&id=<?php echo $row["product_id"]; ?>">
+					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
+						<img src="/Product_image/<?php echo $row["product_image"]; ?>" class="img-responsive" /><br />
 
-						<h4 class="text-info"><?php echo $row["name"]; ?></h4>
+						<h4 class="text-info"><?php echo $row["product_title"]; ?></h4>
 
-						<h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
+						<h4 class="text-danger">$ <?php echo $row["product_price"]; ?></h4>
 
 						<input type="text" name="quantity" value="1" class="form-control" />
 
-						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+						<input type="hidden" name="hidden_name" value="<?php echo $row["Product_title"]; ?>" />
 
-						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+						<input type="hidden" name="hidden_price" value="<?php echo $row["product_price"]; ?>" />
 
 						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
 
@@ -99,7 +98,8 @@ if(isset($_GET["action"]))
 			</div>
 			<?php
 					}
-				}
+				}		
+				
 			?>
 			<div style="clear:both"></div>
 			<br />
@@ -147,3 +147,7 @@ if(isset($_GET["action"]))
 	<br />
 	</body>
 </html>
+
+<?php
+
+?>

@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-#main{
+#main {
   padding: 0px 110px;
 }
 body {
@@ -581,7 +581,7 @@ form.signup-form {
   font-size: 0.95rem;
   padding: 0.7rem 0;
 }
-.panel .likk{
+.panel .likk {
   color: limegreen;
   text-decoration: none;
   letter-spacing: 3px;
@@ -660,3 +660,6 @@ form.signup-form {
   background: none;
 }
 
+form .cont {
+  padding-bottom: 100px;
+}
