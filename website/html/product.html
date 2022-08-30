@@ -1,17 +1,4 @@
 
-<?php 
-session_start();
-include ("conn.php");
-
- ?>
-   <?php
-require "../website/config/constants.php";
-session_start();
-if(isset($_SESSION["uid"])){
-	header("location:profile.php");
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +12,10 @@ if(isset($_SESSION["uid"])){
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/productstyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		
+		
     <title>Gadget Space</title>
   </head>
 
@@ -42,6 +32,23 @@ if(isset($_SESSION["uid"])){
             <li><a href="../html/login.php">login</a></li>
             <li><div ><i class="fa-solid fa-user"></i></div></li>
         </ul>
+           
+          
+          
+    
+       
+     
+
+    </nav>
+    <div class="catagories">
+      <ul class="items">
+           <li> <a href="product.php" class="phone"><h2>phone</h2></a></li> 
+           <li> <a href="product.php"class="case"><h2>phone Case</h2></a></li>
+           <li> <a href="product.php"class="Earphone"><h2>Earphones</h2></a></li>
+           <li> <a href="product.php"class="Charger"><h2>Charger</h2></a></li>
+           <li> <a href="product.php"class="powerbank"><h2>PowerBank</h2></a></li>
+      </ul>
+
  
     </div>
   </header>
@@ -49,10 +56,48 @@ if(isset($_SESSION["uid"])){
  <main>
 
 
+  	<div class="container1">
+			<br />
+			<br />
+			<br />
+	
+      <br />
+			<br /><br />
+			<?php
+				$query = "SELECT * FROM products /* WHERE product_cat =12 */ ORDER BY product_id ASC";
+				$result = mysqli_query($conn, $query);
+				if(mysqli_num_rows($result) > 0)
+				{
+					while($row = mysqli_fetch_array($result))
+					{
+				?>
+			<div class="col-md-4">
+				<form class="cont" method="post" action="index.php?action=add&id=<?php echo $row["product_id"]; ?>">
+				
+						<img src="../../Product_image<?php echo $row["product_image"]; ?>" class="img-responsive" /><br/>
+	
+						<h4 class="text-info"><?php echo $row["product_title"]; ?></h4>
 
+						<h4 class="text-danger">$ <?php echo $row["product_price"]; ?></h4>
 
+						<input type="text" name="quantity" value="1" class="form-control" />
 
+						<input type="hidden" name="hidden_name" value="<?php echo $row["Product_title"]; ?>" />
 
+						<input type="hidden" name="hidden_price" value="<?php echo $row["product_price"]; ?>" />
+
+						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+
+					
+				</form>
+        <br>
+        <br><br><br><br>
+			</div>
+			<?php
+					}
+				}		
+				
+			?>
 
 
  </main>
@@ -79,14 +124,13 @@ if(isset($_SESSION["uid"])){
            <a class="facebook" href="https://www.facebook.com/navid.nabi.7/"><i class="fa-brands fa-facebook fa-2x"></i></a>
            <a class="whatsapp" href="https://www.whatsapp.web"><i class="fa-brands fa-whatsapp fa-2x" ></i></i></a>
            <a class="mail" href="https://www.gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
- 
-           <!-- admin page -->
-<!--     <?php
+ <!-- admin page -->
+    <?php
 $name='naid';
 if ($name=='navid') {
 echo  '<a class="whatsapp" href="#"> admin panel </a>';
 }
-?> -->
+?>
         </div>
        
        

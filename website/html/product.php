@@ -2,11 +2,8 @@
 <?php 
 session_start();
 include ("conn.php");
+?>
 
-
-
-
- ?>
 
 
 <!DOCTYPE html>
@@ -16,14 +13,8 @@ include ("conn.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/ed4cfa797c.js" crossorigin="anonymous"></script>
-    <link rel="Icon" href="Img/Gadget Space-logo-white.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../css/productstyle.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		
+  
 		
     <title>Gadget Space</title>
   </head>
@@ -65,46 +56,7 @@ include ("conn.php");
  <main>
 
 
-  	<div class="container1">
-			<br />
-			<br />
-			<br />
-			<h3 align="center">Products <a href="http://www.webslesson.info/2016/08/simple-php-mysql-shopping-cart.html" title="My Cart">My Cart</a></h3><br />
-			<br /><br />
-			<?php
-				$query = "SELECT * FROM products ORDER BY product_id ASC";
-				$result = mysqli_query($conn, $query);
-				if(mysqli_num_rows($result) > 0)
-				{
-					while($row = mysqli_fetch_array($result))
-					{
-				?>
-			<div class="col-md-4">
-				<form class="cont" method="post" action="index.php?action=add&id=<?php echo $row["product_id"]; ?>">
-				
-						<img src="../Product_image<?php echo $row["product_image"]; ?>" class="img-responsive" /><br />
-
-						<h4 class="text-info"><?php echo $row["product_title"]; ?></h4>
-
-						<h4 class="text-danger">$ <?php echo $row["product_price"]; ?></h4>
-
-						<input type="text" name="quantity" value="1" class="form-control" />
-
-						<input type="hidden" name="hidden_name" value="<?php echo $row["Product_title"]; ?>" />
-
-						<input type="hidden" name="hidden_price" value="<?php echo $row["product_price"]; ?>" />
-
-						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
-
-					
-				</form>
-			</div>
-			<?php
-					}
-				}		
-				
-			?>
-
+ 
 
  </main>
  
@@ -132,7 +84,7 @@ include ("conn.php");
            <a class="mail" href="https://www.gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
  <!-- admin page -->
     <?php
-$name='naid';
+$name='navid';
 if ($name=='navid') {
 echo  '<a class="whatsapp" href="#"> admin panel </a>';
 }

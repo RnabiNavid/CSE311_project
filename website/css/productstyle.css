@@ -88,6 +88,9 @@ nav {
   cursor: pointer;
   border-radius: 10px;
 }
+main {
+  padding: 100px;
+}
 
 footer {
   width: 100%;
@@ -216,7 +219,7 @@ footer {
 
 .items a {
   font-size: 8px;
-  color: rgb(68, 64, 64);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -229,9 +232,10 @@ footer {
 .container1 {
   display: flex;
   justify-content: space-around;
+  height: 1000px;
 }
 .cont {
-  height: 360px;
+  height: 320px;
   width: 230px;
   border: 0px;
   color: solid #333;
@@ -247,4 +251,16 @@ footer {
   width: 250px;
   margin: 0px;
   justify-content: space-around;
+}
+
+.btn {
+  background: #00bf33;
+  padding: 10px 50px;
+  margin: 10px;
+  border: none;
+  outline: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 10px;
 }

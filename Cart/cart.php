@@ -80,7 +80,7 @@ if(isset($_GET["action"]))
 			<div class="col-md-4">
 				<form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
 					<div style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
-						<img src="CSE311_PROJECT/Product_image/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+						<img src="/images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
 
 						<h4 class="text-info"><?php echo $row["name"]; ?></h4>
 
