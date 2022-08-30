@@ -238,13 +238,15 @@ footer {
 .cont {
   height: 320px;
   width: 230px;
-  border: 0px;
+
   color: solid #333;
   background-color: #f1f1f1;
   border-radius: 20px;
   padding: 16px;
   text-align: center;
   border: 100px;
+  justify-content: space-around;
+  margin: 20px;
 }
 
 .btn {
