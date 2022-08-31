@@ -3,7 +3,7 @@
 $serverName="localhost";
 $dBUser="root";
 $dBPass="";
-$dBName="cse311";
+$dBName="ecommeceapp";
 
 $conn = mysqli_connect("$serverName","$dBUser","$dBPass","$dBName");
 

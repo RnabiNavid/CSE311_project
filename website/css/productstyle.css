@@ -90,7 +90,7 @@ nav {
 }
 main {
   height: 580px;
-  padding: 100px;
+  width: 100%;
 }
 
 footer {
@@ -236,7 +236,7 @@ footer {
   height: 320px;
 }
 .cont {
-  height: 320px;
+  height: 100%;
   width: 230px;
 
   color: solid #333;
@@ -272,4 +272,13 @@ footer {
 .table-responsive {
   background-color: aliceblue;
   width: 1280px;
+}
+
+.cont img {
+  width: 100%;
+}
+
+.img-responsive {
+  height: 175px;
+  width: 175px;
 }

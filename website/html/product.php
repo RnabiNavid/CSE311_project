@@ -80,7 +80,7 @@ session_start();
 			<div class="col-md-4">
 				<form class="cont" method="post" action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>">
 				
-						<img src="../../Product_image<?php echo $row["product_image"]; ?>" class="img-responsive" /><br/>
+						<img src="/CSE311_project/Product_image/<?php echo $row["product_image"]; ?>" class="img-responsive" /><br/>
 	
 						<h4 class="text-info"><?php echo $row["product_title"]; ?></h4>
 

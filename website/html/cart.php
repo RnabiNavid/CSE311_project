@@ -1,7 +1,7 @@
 
 <?php 
 session_start();
- $conn = mysqli_connect('localhost','root', '','cse311');
+ $conn = mysqli_connect('localhost','root', '','ecommerceapp');
 
  
 if(isset($_POST["add_to_cart"]))
