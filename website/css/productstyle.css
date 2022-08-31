@@ -216,6 +216,7 @@ footer {
   text-align: end;
   list-style: none;
   justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
 }
 
 .items a {

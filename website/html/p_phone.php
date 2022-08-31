@@ -48,14 +48,24 @@ session_start();
     </nav>
     <div class="catagories">
       <ul class="items">
-           <li> <a href="product.php" class="phone"><h2>phone</h2></a></li> 
-           <li> <a href="product.php"class="case"><h2>phone Case</h2></a></li>
-           <li> <a href="product.php"class="Earphone"><h2>Earphones</h2></a></li>
-           <li> <a href="product.php"class="Charger"><h2>Charger</h2></a></li>
-           <li> <a href="product.php"class="powerbank"><h2>PowerBank</h2></a></li>
+        <li> <a href="../html/p_phone.php" class="phone">
+            <h2>phone</h2>
+          </a></li>
+        <li> <a href="../html/p_case.php" class="case">
+            <h2>phone Case</h2>
+          </a></li>
+        <li> <a href="../html/p_ear.php" class="Earphone">
+            <h2>Earphones</h2>
+          </a></li>
+        <li> <a href="../html/p_charge.php" class="Charger">
+            <h2>Charger</h2>
+          </a></li>
+        <li> <a href="../html/p_power.php" class="powerbank">
+            <h2>PowerBank</h2>
+          </a></li>
       </ul>
 
- 
+
     </div>
   </header>
 
@@ -70,7 +80,7 @@ session_start();
       <br />
 			<br /><br />
 			<?php
-				$query = "SELECT * FROM products /* WHERE product_cat =12 */ ORDER BY product_id ASC";
+				$query = "SELECT * FROM products  WHERE product_cat =12  ORDER BY product_id ASC";
 				$result = mysqli_query($conn, $query);
 				if(mysqli_num_rows($result) > 0)
 				{

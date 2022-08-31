@@ -31,7 +31,7 @@ class Credentials
 	}
 
 	public function loginAdmin($email, $password){
-		$q = $this->con->query("SELECT * FROM admin WHERE email = '$email' LIMIT 1");
+		$q = $this->con->query("SELECT * FROM  admin  WHERE email = '$email' LIMIT 1");
 		if ($q->num_rows > 0) {
 			$row = $q->fetch_assoc();
 			if (password_verify($password, $row['password'])) {
@@ -48,10 +48,6 @@ class Credentials
 
 }
 
-//$c = new Credentials();
-//$c->createAdminAccount("Rizwan", "rizwan@gmail.com", "12345");
-
-//PRINT_R($c->loginAdmin("rizwan@gmail.com", "12345"));
 
 if (isset($_POST['admin_register'])) {
 	extract($_POST);

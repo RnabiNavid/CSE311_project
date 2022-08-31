@@ -1,3 +1,9 @@
+<?php 
+session_start();
+ $conn = mysqli_connect('localhost','root', '','ecommerceapp');
+ ?>
+
+
 
 
 <!DOCTYPE html>
@@ -40,16 +46,26 @@
      
 
     </nav>
-    <div class="catagories">
+   <div class="catagories">
       <ul class="items">
-           <li> <a href="product.php" class="phone"><h2>phone</h2></a></li> 
-           <li> <a href="product.php"class="case"><h2>phone Case</h2></a></li>
-           <li> <a href="product.php"class="Earphone"><h2>Earphones</h2></a></li>
-           <li> <a href="product.php"class="Charger"><h2>Charger</h2></a></li>
-           <li> <a href="product.php"class="powerbank"><h2>PowerBank</h2></a></li>
+        <li> <a href="../html/p_phone.php" class="phone">
+            <h2>phone</h2>
+          </a></li>
+        <li> <a href="../html/p_case.php" class="case">
+            <h2>phone Case</h2>
+          </a></li>
+        <li> <a href="../html/p_ear.php" class="Earphone">
+            <h2>Earphones</h2>
+          </a></li>
+        <li> <a href="../html/p_charge.php" class="Charger">
+            <h2>Charger</h2>
+          </a></li>
+        <li> <a href="../html/p_power.php" class="powerbank">
+            <h2>PowerBank</h2>
+          </a></li>
       </ul>
 
- 
+
     </div>
   </header>
 
@@ -64,7 +80,7 @@
       <br />
 			<br /><br />
 			<?php
-				$query = "SELECT * FROM products /* WHERE product_cat =12 */ ORDER BY product_id ASC";
+				$query = "SELECT * FROM products  WHERE product_cat =2 ORDER BY product_id ASC";
 				$result = mysqli_query($conn, $query);
 				if(mysqli_num_rows($result) > 0)
 				{
@@ -72,9 +88,9 @@
 					{
 				?>
 			<div class="col-md-4">
-				<form class="cont" method="post" action="index.php?action=add&id=<?php echo $row["product_id"]; ?>">
+				<form class="cont" method="post" action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>">
 				
-						<img src="../../Product_image<?php echo $row["product_image"]; ?>" class="img-responsive" /><br/>
+						<img src="/CSE311_project/Product_image/<?php echo $row["product_image"]; ?>" class="img-responsive" /><br/>
 	
 						<h4 class="text-info"><?php echo $row["product_title"]; ?></h4>
 
@@ -82,14 +98,15 @@
 
 						<input type="text" name="quantity" value="1" class="form-control" />
 
-						<input type="hidden" name="hidden_name" value="<?php echo $row["Product_title"]; ?>" />
+						<input type="hidden" name="hidden_name" value="<?php echo $row["product_title"]; ?>" />
 
-						<input type="hidden" name="hidden_price" value="<?php echo $row["product_price"]; ?>" />
+						<input type="hidden" name="hidden_price" value= "<?php echo $row["product_price"]; ?>" />
 
 						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
 
 					
 				</form>
+      
         <br>
         <br><br><br><br>
 			</div>

@@ -63,19 +63,19 @@ session_start();
     </nav>
     <div class="catagories">
       <ul class="items">
-        <li> <a href="../html/product.php" class="phone">
+        <li> <a href="../html/p_phone.php" class="phone">
             <h2>phone</h2>
           </a></li>
-        <li> <a href="../html/product.php" class="case">
+        <li> <a href="../html/p_case.php" class="case">
             <h2>phone Case</h2>
           </a></li>
-        <li> <a href="../html/product.php" class="Earphone">
+        <li> <a href="../html/p_ear.php" class="Earphone">
             <h2>Earphones</h2>
           </a></li>
-        <li> <a href="../html/product.php" class="Charger">
+        <li> <a href="../html/p_charge.php" class="Charger">
             <h2>Charger</h2>
           </a></li>
-        <li> <a href="../html/product.php" class="powerbank">
+        <li> <a href="../html/p_power.php" class="powerbank">
             <h2>PowerBank</h2>
           </a></li>
       </ul>
